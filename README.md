@@ -740,6 +740,15 @@ Installing it is very easy through Homebrew:
 
     $ brew update
     $ brew install mongo
+    $ mkdir -p /data/db
+
+### Set permissions for the data directory
+Ensure that user account running mongod has correct permissions for the directory:
+
+```bash
+sudo chmod 0755 /data/db
+sudo chown $USER /data/db
+```
 
 ### Usage
 
