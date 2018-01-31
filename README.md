@@ -736,6 +736,9 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 ### Install
 
+#### Docker
+`docker run --name mongo-dev -d -v /data/db  -p 27017:27017 mongo` 
+
 Installing it is very easy through Homebrew:
 
     $ brew update
