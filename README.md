@@ -201,7 +201,7 @@ And `$ which git` should output `/usr/local/bin/git`.
 Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig) file to your home directory:
 
     $ cd ~
-    $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig
+    $ curl -O https://raw.githubusercontent.com/khriztianmoreno/mac-dev-setup/master/.gitconfig
 
 It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
 
