@@ -510,6 +510,55 @@ You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/
 
 ## Node.js
 
+### **NVM** 
+Node Version Manager - Simple bash script to manage multiple active node.js versions
+
+#### Installation
+
+##### Install script
+
+To install or update nvm, you can use the [install script][2] using cURL:
+
+```sh
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+```
+
+or Wget:
+
+```sh
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+```
+
+<sub>The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).</sub>
+
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+You can customize the install source, directory, profile, and version using the `NVM_SOURCE`, `NVM_DIR`, `PROFILE`, and `NODE_VERSION` variables.
+Eg: `curl ... | NVM_DIR=/usr/local/nvm bash` for a global install. Ensure that the `NVM_DIR` does not contain a trailing slash.
+
+<sub>*NB. The installer can use `git`, `curl`, or `wget` to download `nvm`, whatever is available.*</sub>
+
+**Note:** On Linux, after running the install script, if you get `nvm: command not found` or see no feedback from your terminal after you type:
+
+```sh
+command -v nvm
+```
+simply close your current terminal, open a new terminal, and try verifying again.
+
+**Note:** On OS X, if you get `nvm: command not found` after running the install script, one of the following might be the reason:-
+  - your system may not have a [`.bash_profile file`] where the command is set up. Simply create one with `touch ~/.bash_profile` and run the install script again
+  - you might need to restart your terminal instance. Try opening a new tab/window in your terminal and retry.
+
+If the above doesn't fix the problem, open your `.bash_profile` and add the following line of code:
+
+`source ~/.bashrc`
+
+- For more information about this issue and possible workarounds, please [refer here](https://github.com/creationix/nvm/issues/576)
+
+### Homebrew
 Install [Node.js](http://nodejs.org/) with Homebrew:
 
     $ brew update
@@ -566,17 +615,6 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-##JSHint
-
-JSHint is a JavaScript developer's best friend. 
-
-If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text. 
-
-Install JSHint via npm (global install preferred)
-
-    $ npm install -g jshint
-
-Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
 
 ## Ruby and RVM
 
